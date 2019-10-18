@@ -14,10 +14,10 @@
    */
   var getWizardName = function () {
 
-    var firstNameIndex = getRandomNumber(0, WIZARD_FIRST_NAMES.length - 1);
-    var secondNameIndex = getRandomNumber(0, WIZARD_SECOND_NAMES.length - 1);
+    var firstNameIndex = window.utils.getRandomNumber(0, window.renderer.settings.WIZARD_FIRST_NAMES.length - 1);
+    var secondNameIndex = window.utils.getRandomNumber(0, window.renderer.settings.WIZARD_SECOND_NAMES.length - 1);
 
-    var wizardName = WIZARD_FIRST_NAMES[firstNameIndex] + ' ' + WIZARD_SECOND_NAMES[secondNameIndex];
+    var wizardName = window.renderer.settings.WIZARD_FIRST_NAMES[firstNameIndex] + ' ' + window.renderer.settings.WIZARD_SECOND_NAMES[secondNameIndex];
 
     return wizardName;
   };
@@ -28,10 +28,10 @@
    */
   var getWizardColors = function () {
 
-    var coatColorsIndex = getRandomNumber(0, COAT_COLOR.length - 1);
-    var eyesColorsIndex = getRandomNumber(0, EYES_COLOR.length - 1);
+    var coatColorsIndex = window.utils.getRandomNumber(0, window.renderer.settings.COAT_COLOR.length - 1);
+    var eyesColorsIndex = window.utils.getRandomNumber(0, window.renderer.settings.EYES_COLOR.length - 1);
 
-    return [COAT_COLOR[coatColorsIndex], EYES_COLOR[eyesColorsIndex]];
+    return [window.renderer.settings.COAT_COLOR[coatColorsIndex], window.renderer.settings.EYES_COLOR[eyesColorsIndex]];
   };
 
   for (var i = 0; i < 4; i++) {
